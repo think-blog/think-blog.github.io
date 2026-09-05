@@ -1,17 +1,15 @@
 // ====== KONFIGURASI API GROQ (MULTI-KEY ROTATION) ======
 const API_KEYS = [
-    "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",
-    "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",
-    "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",
-    "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"
+    "xpl_4da5bf7bb69602bca0a4eef12e8b746918c259f4",
+    "xpl_4da5bf7bb69602bca0a4eef12e8b746918c259f4",
+    "xpl_4da5bf7bb69602bca0a4eef12e8b746918c259f4",
+    "xpl_4da5bf7bb69602bca0a4eef12e8b746918c259f4"
 ];
 
 let currentKeyIndex = Math.floor(Math.random() * API_KEYS.length);
 function getActiveApiKey() { return API_KEYS[currentKeyIndex]; }
 function rotateApiKey() { currentKeyIndex = (currentKeyIndex + 1) % API_KEYS.length; return API_KEYS[currentKeyIndex]; }
 
-const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
-const AI_MODEL = "llama-3.3-70b-versatile";
 
 // ====== MATERI UTBK 2024-2026 (SANGAT KOMPREHENSIF & PADAT) ======
 const DATA_MATERI = {
